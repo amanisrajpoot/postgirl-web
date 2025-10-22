@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0b10;
+  --card: #111118;
+  --muted: #9aa3af;
+}
+
+html, body, #__next { height: 100%; }
+body { @apply bg-[var(--bg)] text-white; }
+
+.pg-btn {
+  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-pgPink text-white font-medium shadow-soft hover:opacity-95 transition;
+}
+.pg-ghost {
+  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 bg-white/10 backdrop-blur text-white font-medium hover:bg-white/20 transition;
+}
+.pg-card {
+  @apply bg-[var(--card)] rounded-2xl p-6 shadow-soft;
+}
+.pg-kbd {
+  @apply bg-white/10 px-2 py-1 rounded border border-white/10 text-sm;
+}
+a { @apply underline-offset-4 hover:underline; }
+.code {
+  @apply font-mono text-sm bg-black/40 rounded-xl p-4 border border-white/10 overflow-x-auto;
+}
