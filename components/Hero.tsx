@@ -1,8 +1,8 @@
 export default function Hero(){
   return (
-    <section className="relative pt-12 md:pt-24 pb-16 md:pb-28">
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-        <div>
+    <section className="relative pt-12 md:pt-24 pb-16 md:pb-28 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 md:gap-10 items-center w-full">
+        <div className="w-full">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
             Postman is heavy.<br/>
             <span className="text-pgPink">Meet Postgirl.</span>
@@ -18,8 +18,8 @@ export default function Hero(){
             "The only thing we deliver late is sarcasm."
           </p>
         </div>
-        <div className="pg-card mt-8 md:mt-0">
-          <pre className="code text-xs sm:text-sm">
+        <div className="pg-card mt-8 md:mt-0 w-full overflow-hidden">
+          <pre className="code text-xs sm:text-sm overflow-x-auto max-w-full">
 postgirl send -X GET "https://httpbin.org/get"
 
 postgirl run samples/collection.yml \

@@ -26,4 +26,5 @@ body { @apply bg-[var(--bg)] text-white; }
 a { @apply underline-offset-4 hover:underline; }
 .code {
   @apply font-mono text-sm bg-black/40 rounded-xl p-4 border border-white/10 overflow-x-auto;
+  max-width: 100%;
 }
