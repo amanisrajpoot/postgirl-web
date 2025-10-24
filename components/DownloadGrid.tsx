@@ -1,11 +1,11 @@
 type Build = { os: string; arch: string; file: string; note?: string };
 const builds: Build[] = [
-  { os: "macOS",  arch: "Intel (amd64)", file: "postgirl-darwin-amd64",     note: "chmod +x after download" },
-  { os: "macOS",  arch: "Apple Silicon (arm64)", file: "postgirl-darwin-arm64", note: "chmod +x after download" },
-  { os: "Linux",  arch: "x64 (amd64)",   file: "postgirl-linux-amd64",       note: "chmod +x after download" },
-  { os: "Linux",  arch: "ARM64",         file: "postgirl-linux-arm64",       note: "chmod +x after download" },
-  { os: "Windows",arch: "x64 (amd64)",   file: "postgirl-windows-amd64.exe" },
-  { os: "Windows",arch: "ARM64",         file: "postgirl-windows-arm64.exe" },
+  { os: "macOS",  arch: "Intel (amd64)", file: "postgirl-darwin-amd64.zip",     note: "Includes binary + README" },
+  { os: "macOS",  arch: "Apple Silicon (arm64)", file: "postgirl-darwin-arm64.zip", note: "Includes binary + README" },
+  { os: "Linux",  arch: "x64 (amd64)",   file: "postgirl-linux-amd64.zip",       note: "Includes binary + README" },
+  { os: "Linux",  arch: "ARM64",         file: "postgirl-linux-arm64.zip",       note: "Includes binary + README" },
+  { os: "Windows",arch: "x64 (amd64)",   file: "postgirl-windows-amd64.zip" },
+  { os: "Windows",arch: "ARM64",         file: "postgirl-windows-arm64.zip" },
 ];
 
 export default function DownloadGrid(){
@@ -18,7 +18,7 @@ export default function DownloadGrid(){
               {b.os} <span className="text-white/60">({b.arch})</span>
             </h3>
             <p className="text-white/70 mt-1">
-              {b.os === "Windows" ? "Direct .exe" : "Raw binary (no zip)"}.
+              {b.os === "Windows" ? "Zipped .exe + README" : "Zipped binary + README"}.
             </p>
             {b.note && <p className="text-white/50 mt-1">{b.note}</p>}
           </div>

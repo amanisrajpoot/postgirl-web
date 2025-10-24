@@ -18,12 +18,35 @@ export default function Downloads(){
           <DownloadGrid />
         </div>
         <div className="mt-12 pg-card">
-          <h2 className="text-2xl font-bold">Install tips</h2>
-          <ul className="list-disc list-inside text-white/80 mt-3 space-y-2">
-            <li><strong>macOS:</strong> Right-click → Open if Gatekeeper complains. Or <span className="pg-kbd">xattr -dr com.apple.quarantine</span>.</li>
-            <li><strong>Linux:</strong> <span className="pg-kbd">chmod +x postgirl</span> then <span className="pg-kbd">./postgirl --help</span>.</li>
-            <li><strong>Windows:</strong> Unzip and double-click <span className="pg-kbd">Run-Postgirl.bat</span> (if you ship one) or run in PowerShell.</li>
-          </ul>
+          <h2 className="text-2xl font-bold">🚀 Getting Started</h2>
+          <div className="mt-6 space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Download & Extract</h3>
+              <ul className="list-disc list-inside text-white/80 space-y-2">
+                <li><strong>macOS:</strong> Download zip, extract, then <span className="pg-kbd">chmod +x postgirl-darwin-*</span></li>
+                <li><strong>Linux:</strong> Download zip, extract, then <span className="pg-kbd">chmod +x postgirl-linux-*</span></li>
+                <li><strong>Windows:</strong> Download zip, extract, then double-click <span className="pg-kbd">postgirl-windows-*.exe</span></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Usage</h3>
+              <ul className="list-disc list-inside text-white/80 space-y-2">
+                <li><strong>Command Line:</strong> <span className="pg-kbd">./postgirl-* https://api.example.com</span></li>
+                <li><strong>Help:</strong> <span className="pg-kbd">./postgirl-* --help</span></li>
+                <li><strong>Version:</strong> <span className="pg-kbd">./postgirl-* --version</span></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Troubleshooting</h3>
+              <ul className="list-disc list-inside text-white/80 space-y-2">
+                <li><strong>macOS Gatekeeper:</strong> Right-click → Open, or run <span className="pg-kbd">xattr -dr com.apple.quarantine postgirl-darwin-*</span></li>
+                <li><strong>Permission Denied:</strong> Make sure to run <span className="pg-kbd">chmod +x postgirl-*</span> after extraction</li>
+                <li><strong>Windows:</strong> If blocked by Windows Defender, click "More info" → "Run anyway"</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
