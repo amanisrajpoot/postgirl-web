@@ -8,12 +8,15 @@ export default function Header(){
           <span className="inline-block w-8 h-8 rounded-xl bg-pgPink" />
           <span className="font-bold text-lg">Postgirl</span>
         </Link>
-        <nav className="flex items-center gap-4">
+        <nav className="hidden md:flex items-center gap-4">
           <Link className="pg-ghost no-underline" href="/downloads">Downloads</Link>
           <a className="pg-ghost" href="#features">Features</a>
           <a className="pg-ghost" href="#how">How it works</a>
           <a className="pg-btn" href="https://github.com/yourname/postgirl" target="_blank" rel="noreferrer">GitHub ↗</a>
         </nav>
+        <div className="md:hidden">
+          <a className="pg-btn text-sm px-3 py-2" href="/downloads">Download</a>
+        </div>
       </div>
     </header>
   );

@@ -10,19 +10,19 @@ const builds: Build[] = [
 
 export default function DownloadGrid(){
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
       {builds.map(b => (
         <div key={b.file} className="pg-card flex flex-col justify-between">
           <div>
-            <h3 className="text-xl font-bold">
-              {b.os} <span className="text-white/60">({b.arch})</span>
+            <h3 className="text-lg md:text-xl font-bold">
+              {b.os} <span className="text-white/60 text-sm md:text-base">({b.arch})</span>
             </h3>
-            <p className="text-white/70 mt-1">
+            <p className="text-white/70 mt-1 text-sm md:text-base">
               {b.os === "Windows" ? "Zipped .exe + README" : "Zipped binary + README"}.
             </p>
-            {b.note && <p className="text-white/50 mt-1">{b.note}</p>}
+            {b.note && <p className="text-white/50 mt-1 text-sm">{b.note}</p>}
           </div>
-          <a className="pg-btn mt-4 no-underline" href={`/downloads/${b.file}`} download>
+          <a className="pg-btn mt-4 no-underline text-center text-sm md:text-base" href={`/downloads/${b.file}`} download>
             Download
           </a>
         </div>
